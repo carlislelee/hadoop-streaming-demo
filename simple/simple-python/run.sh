@@ -12,7 +12,7 @@ hadoop fs -rmr $output
 hadoop streaming \
   -D mapred.compress.map.output=true \
   -D mapred.map.tasks=3   \
-  -D mapred.reduce.tasks=1     \
+  -D mapred.reduce.tasks=0     \
   -D mapred.job.name="hadoop_streaming_test" \
   -input ${input}                      \
   -output ${output}                    \
